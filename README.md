@@ -1,7 +1,6 @@
 # About
 
-The project consists of two components: a server and a client connected through a REST API. The server performs language detection based on the text provided. For prediction, the xlm-roberta-base-language-detection model is used, which achieves a very high precision for 20 languages.
-
+The project consists of two components: a server and a client connected through a REST API. The server performs language detection based on the text provided. For prediction, the xlm-roberta-base-language-detection model is used, which achieves a very high precision for 20 languages. ``` https://huggingface.co/papluca/xlm-roberta-base-language-detection ```
 ## Getting started
 
 To begin, install the required packages using pip
@@ -16,8 +15,8 @@ The server's API has two endpoints:
 
 2. /detect_batch - A POST method that detects the language for a larger number of texts. It accepts a JSON body in the format {texts: list[str]} and returns a JSON response {language: list[str]}.
 
-The config.json file allows you to change the model to your own custom one from HF.
-To start the server, you should execute the following command in server directory:
+The config.json file allows to change the model to own custom one from HF.
+To start the server, should execute the following command in server directory:
 ``` uvicorn main:app --reload ```
 
 ## Evaluation script
